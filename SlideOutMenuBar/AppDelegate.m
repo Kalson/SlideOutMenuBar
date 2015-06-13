@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "SWRevealViewController.h"
+#import "ViewController.h"
+#import "MenuTVC.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // retrive the instance windown and set it to the screen bounds
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    // View Controllers
+    MenuTVC *rearVC = [MenuTVC new];
+    ViewController *frontVC = [ViewController new];
+    UINavigationController *frontVCNavC = [[UINavigationController alloc] initWithRootViewController:frontVC];
+    SWRevealViewController *revealVC = [[SWRevealViewController alloc] initWithRearViewController:rearVC frontViewController:frontVCNavC];
+    
+    self.window.rootViewController = revealVC;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

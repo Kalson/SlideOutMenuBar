@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2636E8661B2C90FE00C0BE0D /* MenuTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2636E8651B2C90FE00C0BE0D /* MenuTVC.m */; };
+		2636E86A1B2C916200C0BE0D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2636E8691B2C916200C0BE0D /* SWRevealViewController.m */; };
 		267E712B1B2BC65E0046A8DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 267E712A1B2BC65E0046A8DC /* main.m */; };
 		267E712E1B2BC65E0046A8DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 267E712D1B2BC65E0046A8DC /* AppDelegate.m */; };
 		267E71311B2BC65E0046A8DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 267E71301B2BC65E0046A8DC /* ViewController.m */; };
@@ -14,7 +16,6 @@
 		267E71361B2BC65E0046A8DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267E71351B2BC65E0046A8DC /* Images.xcassets */; };
 		267E71391B2BC65E0046A8DC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 267E71371B2BC65E0046A8DC /* LaunchScreen.xib */; };
 		267E71451B2BC65F0046A8DC /* SlideOutMenuBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 267E71441B2BC65F0046A8DC /* SlideOutMenuBarTests.m */; };
-		267E71541B2C8DC70046A8DC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 267E71531B2C8DC70046A8DC /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2636E8641B2C90FE00C0BE0D /* MenuTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTVC.h; sourceTree = "<group>"; };
+		2636E8651B2C90FE00C0BE0D /* MenuTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTVC.m; sourceTree = "<group>"; };
+		2636E8681B2C916200C0BE0D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		2636E8691B2C916200C0BE0D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		267E71251B2BC65E0046A8DC /* SlideOutMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideOutMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		267E71291B2BC65E0046A8DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		267E712A1B2BC65E0046A8DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -41,8 +46,6 @@
 		267E713E1B2BC65F0046A8DC /* SlideOutMenuBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlideOutMenuBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		267E71431B2BC65F0046A8DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		267E71441B2BC65F0046A8DC /* SlideOutMenuBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideOutMenuBarTests.m; sourceTree = "<group>"; };
-		267E71521B2C8DC70046A8DC /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		267E71531B2C8DC70046A8DC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +66,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2636E8671B2C916200C0BE0D /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2636E8681B2C916200C0BE0D /* SWRevealViewController.h */,
+				2636E8691B2C916200C0BE0D /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			path = SlideOutMenuBar/SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		2636E86B1B2C917100C0BE0D /* RearViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2636E8641B2C90FE00C0BE0D /* MenuTVC.h */,
+				2636E8651B2C90FE00C0BE0D /* MenuTVC.m */,
+			);
+			name = RearViewControllers;
+			path = SlideOutMenuBar;
+			sourceTree = "<group>";
+		};
 		267E711C1B2BC65E0046A8DC = {
 			isa = PBXGroup;
 			children = (
-				267E71551B2C8DD30046A8DC /* SWRevealViewControllers */,
+				2636E8671B2C916200C0BE0D /* SWRevealViewController */,
+				2636E86B1B2C917100C0BE0D /* RearViewControllers */,
 				267E71271B2BC65E0046A8DC /* SlideOutMenuBar */,
 				267E71411B2BC65F0046A8DC /* SlideOutMenuBarTests */,
 				267E71261B2BC65E0046A8DC /* Products */,
@@ -121,16 +145,6 @@
 				267E71431B2BC65F0046A8DC /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		267E71551B2C8DD30046A8DC /* SWRevealViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				267E71521B2C8DC70046A8DC /* SWRevealViewController.h */,
-				267E71531B2C8DC70046A8DC /* SWRevealViewController.m */,
-			);
-			name = SWRevealViewControllers;
-			path = SlideOutMenuBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,8 +249,9 @@
 			files = (
 				267E71311B2BC65E0046A8DC /* ViewController.m in Sources */,
 				267E712E1B2BC65E0046A8DC /* AppDelegate.m in Sources */,
+				2636E86A1B2C916200C0BE0D /* SWRevealViewController.m in Sources */,
+				2636E8661B2C90FE00C0BE0D /* MenuTVC.m in Sources */,
 				267E712B1B2BC65E0046A8DC /* main.m in Sources */,
-				267E71541B2C8DC70046A8DC /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +448,7 @@
 				267E714A1B2BC65F0046A8DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		267E714B1B2BC65F0046A8DC /* Build configuration list for PBXNativeTarget "SlideOutMenuBarTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +457,7 @@
 				267E714D1B2BC65F0046A8DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
