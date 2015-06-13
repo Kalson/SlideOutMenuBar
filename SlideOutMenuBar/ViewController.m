@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SWRevealViewController.h"
 
 @interface ViewController ()
 
@@ -18,7 +19,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor greenColor];
+    
+    // retrieve SWRevealViewController
+    SWRevealViewController *revealVC = self.revealViewController;
+    
+    // create side Bar Button
+    UIBarButtonItem *sideBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon"] style:UIBarButtonItemStyleDone target:revealVC action:@selector(revealToggle:)];
+    self.navigationItem.leftBarButtonItem = sideBarButton;
+    
+    // make the view slide with touch gestures
+    [self.view addGestureRecognizer:revealVC.panGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning {
