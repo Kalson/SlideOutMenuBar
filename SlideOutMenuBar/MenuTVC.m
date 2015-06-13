@@ -7,6 +7,10 @@
 //
 
 #import "MenuTVC.h"
+#import "SWRevealViewController.h"
+#import "ViewController.h"
+#import "RedViewController.h"
+#import "BlueViewController.h"
 
 @interface MenuTVC ()
 
@@ -16,6 +20,11 @@
 {
     NSArray *menuItems;
     NSArray *menuColors;
+    
+    ViewController *matrixVC;
+    RedViewController *redPillVC;
+    BlueViewController *bluePillVC;
+
 }
 
 - (void)viewDidLoad {
@@ -29,6 +38,12 @@
     
     menuItems = @[@"Matrix",@"Red Pill",@"Blue Pill"];
     menuColors = @[[UIColor greenColor],[UIColor redColor],[UIColor blueColor]];
+
+    matrixVC = [ViewController new];
+    redPillVC = [RedViewController new];
+    bluePillVC = [BlueViewController new];
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,6 +79,42 @@
     cell.textLabel.textColor = [UIColor whiteColor];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // retrieve SWRevealViewController and set it to self
+    SWRevealViewController *revealVC = self.revealViewController;
+    
+    // set a integer object to the indexpath
+    NSInteger rowSelected = indexPath.row;
+    
+    // create a dynamic view controllers class for the view controllers selected
+    UIViewController *selectedFrontVC;
+    
+    if (rowSelected == 0)
+    {
+        selectedFrontVC = matrixVC;
+    }
+    
+    else if (rowSelected == 1)
+    {
+        selectedFrontVC = redPillVC;
+    }
+    
+    else {
+        selectedFrontVC = bluePillVC;
+    }
+    
+    // created Nav C for the controllers selected
+    UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:selectedFrontVC];
+    
+    // make the Reveal VC push the front view controllers
+    [revealVC pushFrontViewController:navC animated:YES];
+    
+
+    
+    
 }
 
 

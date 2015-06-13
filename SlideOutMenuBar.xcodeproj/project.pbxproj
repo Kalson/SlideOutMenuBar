@@ -11,6 +11,8 @@
 		2636E86A1B2C916200C0BE0D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2636E8691B2C916200C0BE0D /* SWRevealViewController.m */; };
 		2636E86E1B2C947F00C0BE0D /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2636E86C1B2C947F00C0BE0D /* reveal-icon.png */; };
 		2636E86F1B2C947F00C0BE0D /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2636E86D1B2C947F00C0BE0D /* reveal-icon@2x.png */; };
+		2636E8751B2C9A5800C0BE0D /* BlueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2636E8721B2C9A5800C0BE0D /* BlueViewController.m */; };
+		2636E8761B2C9A5800C0BE0D /* RedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2636E8741B2C9A5800C0BE0D /* RedViewController.m */; };
 		267E712B1B2BC65E0046A8DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 267E712A1B2BC65E0046A8DC /* main.m */; };
 		267E712E1B2BC65E0046A8DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 267E712D1B2BC65E0046A8DC /* AppDelegate.m */; };
 		267E71311B2BC65E0046A8DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 267E71301B2BC65E0046A8DC /* ViewController.m */; };
@@ -37,6 +39,10 @@
 		2636E8691B2C916200C0BE0D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		2636E86C1B2C947F00C0BE0D /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
 		2636E86D1B2C947F00C0BE0D /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@2x.png"; sourceTree = "<group>"; };
+		2636E8711B2C9A5800C0BE0D /* BlueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueViewController.h; sourceTree = "<group>"; };
+		2636E8721B2C9A5800C0BE0D /* BlueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueViewController.m; sourceTree = "<group>"; };
+		2636E8731B2C9A5800C0BE0D /* RedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedViewController.h; sourceTree = "<group>"; };
+		2636E8741B2C9A5800C0BE0D /* RedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedViewController.m; sourceTree = "<group>"; };
 		267E71251B2BC65E0046A8DC /* SlideOutMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideOutMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		267E71291B2BC65E0046A8DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		267E712A1B2BC65E0046A8DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,10 +96,25 @@
 			path = SlideOutMenuBar;
 			sourceTree = "<group>";
 		};
+		2636E8701B2C981E00C0BE0D /* FrontViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				267E712F1B2BC65E0046A8DC /* ViewController.h */,
+				267E71301B2BC65E0046A8DC /* ViewController.m */,
+				2636E8731B2C9A5800C0BE0D /* RedViewController.h */,
+				2636E8741B2C9A5800C0BE0D /* RedViewController.m */,
+				2636E8711B2C9A5800C0BE0D /* BlueViewController.h */,
+				2636E8721B2C9A5800C0BE0D /* BlueViewController.m */,
+			);
+			name = FrontViewControllers;
+			path = SlideOutMenuBar;
+			sourceTree = "<group>";
+		};
 		267E711C1B2BC65E0046A8DC = {
 			isa = PBXGroup;
 			children = (
 				2636E8671B2C916200C0BE0D /* SWRevealViewController */,
+				2636E8701B2C981E00C0BE0D /* FrontViewControllers */,
 				2636E86B1B2C917100C0BE0D /* RearViewControllers */,
 				267E71271B2BC65E0046A8DC /* SlideOutMenuBar */,
 				267E71411B2BC65F0046A8DC /* SlideOutMenuBarTests */,
@@ -115,13 +136,6 @@
 			children = (
 				267E712C1B2BC65E0046A8DC /* AppDelegate.h */,
 				267E712D1B2BC65E0046A8DC /* AppDelegate.m */,
-				267E712F1B2BC65E0046A8DC /* ViewController.h */,
-				267E71301B2BC65E0046A8DC /* ViewController.m */,
-				267E71321B2BC65E0046A8DC /* Main.storyboard */,
-				267E71351B2BC65E0046A8DC /* Images.xcassets */,
-				2636E86C1B2C947F00C0BE0D /* reveal-icon.png */,
-				2636E86D1B2C947F00C0BE0D /* reveal-icon@2x.png */,
-				267E71371B2BC65E0046A8DC /* LaunchScreen.xib */,
 				267E71281B2BC65E0046A8DC /* Supporting Files */,
 			);
 			path = SlideOutMenuBar;
@@ -130,6 +144,11 @@
 		267E71281B2BC65E0046A8DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				267E71321B2BC65E0046A8DC /* Main.storyboard */,
+				267E71351B2BC65E0046A8DC /* Images.xcassets */,
+				2636E86C1B2C947F00C0BE0D /* reveal-icon.png */,
+				2636E86D1B2C947F00C0BE0D /* reveal-icon@2x.png */,
+				267E71371B2BC65E0046A8DC /* LaunchScreen.xib */,
 				267E71291B2BC65E0046A8DC /* Info.plist */,
 				267E712A1B2BC65E0046A8DC /* main.m */,
 			);
@@ -256,7 +275,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				267E71311B2BC65E0046A8DC /* ViewController.m in Sources */,
+				2636E8761B2C9A5800C0BE0D /* RedViewController.m in Sources */,
 				267E712E1B2BC65E0046A8DC /* AppDelegate.m in Sources */,
+				2636E8751B2C9A5800C0BE0D /* BlueViewController.m in Sources */,
 				2636E86A1B2C916200C0BE0D /* SWRevealViewController.m in Sources */,
 				2636E8661B2C90FE00C0BE0D /* MenuTVC.m in Sources */,
 				267E712B1B2BC65E0046A8DC /* main.m in Sources */,
