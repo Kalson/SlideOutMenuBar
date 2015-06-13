@@ -10,4 +10,7 @@
 
 @interface BlueViewController : UIViewController
 
+@property (nonatomic) NSString *titleString;
+
+
 @end

@@ -10,4 +10,7 @@
 
 @interface RedViewController : UIViewController
 
+@property (nonatomic) NSString *titleString;
+
+
 @end

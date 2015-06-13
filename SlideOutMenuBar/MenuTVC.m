@@ -106,11 +106,18 @@
         selectedFrontVC = bluePillVC;
     }
     
+    // set the title strings to menu Items
+    matrixVC.titleString = menuItems[indexPath.row];
+    redPillVC.titleString = menuItems[indexPath.row];
+    bluePillVC.titleString = menuItems[indexPath.row];
+    
     // created Nav C for the controllers selected
     UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:selectedFrontVC];
     
     // make the Reveal VC push the front view controllers
     [revealVC pushFrontViewController:navC animated:YES];
+    
+    
     
 
     

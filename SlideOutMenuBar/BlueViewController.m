@@ -20,6 +20,7 @@
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor blueColor];
+    self.title = self.titleString;
     
     // Retreive SWRevealViewController and set it to self
     SWRevealViewController *revealVC = self.revealViewController;

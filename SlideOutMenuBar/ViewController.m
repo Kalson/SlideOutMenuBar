@@ -32,6 +32,16 @@
     [self.view addGestureRecognizer:revealVC.panGestureRecognizer];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if (self.title == nil)
+        self.title = @"Matrix";
+    else
+        self.title = self.titleString;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

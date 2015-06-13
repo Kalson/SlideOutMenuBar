@@ -29,6 +29,7 @@
     ViewController *frontVC = [ViewController new];
     UINavigationController *frontVCNavC = [[UINavigationController alloc] initWithRootViewController:frontVC];
     SWRevealViewController *revealVC = [[SWRevealViewController alloc] initWithRearViewController:rearVC frontViewController:frontVCNavC];
+    revealVC.title = @"sgs";
     
     self.window.rootViewController = revealVC;
     [self.window makeKeyAndVisible];
